@@ -1,4 +1,4 @@
-# Copyright (c) 2022, Solufy and Contributors
+# Copyright (c) 2025, Shreyas and Contributors
 # See license.txt
 
 # import frappe
