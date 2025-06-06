@@ -4,6 +4,9 @@
 frappe.ui.form.on('Direct Shipping', {
     refresh(frm) {
         calculate_total_freight(frm);
+        if (frm.doc.workflow_state === "Delivered"){
+            frm.disable_form()
+        }
     },
     freight_order_line_add(frm) {
         calculate_total_freight(frm);

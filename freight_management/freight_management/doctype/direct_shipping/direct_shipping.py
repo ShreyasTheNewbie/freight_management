@@ -4,6 +4,8 @@
 import frappe
 from frappe import msgprint, _
 from frappe.model.document import Document
+from erpnext.selling.doctype.sales_order.sales_order import make_delivery_note
+from frappe.utils import  get_link_to_form
 
 class DirectShipping(Document):
 	pass
@@ -33,3 +35,9 @@ def validate(self,cdt):
 			"status":self.workflow_state
 			})
 		vals.save()
+	old_doc = self.get_doc_before_save()
+	if old_doc and old_doc.workflow_state != self.workflow_state:
+		if self.workflow_state == "Delivered":
+			doc = make_delivery_note(self)
+			doc.save()
+			msgprint(_("Delivery Note <b>{0} </b>created successfully.<br> Please submit It").format(get_link_to_form("Delivery Note",doc.name)))
