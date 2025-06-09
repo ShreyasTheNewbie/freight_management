@@ -17,34 +17,35 @@ class DirectShipping(Document):
 
 def validate(self,cdt):
 	for c in self.containers:
-		if not frappe.db.exists("Track Shipping Order",{"container_no":c.container_no,"name1":self.name, "row_name":c.name}):
-			vals = frappe.get_doc({
-			"doctype": "Track Shipping Order",
-			"name1":self.name,
-			"source_location":self.loading_port,
-			"destination_location":self.discharging_port,
-			"transport_carriage":self.transport,
-			"container_no":c.container_no,
-			"20":c.get('20'),
-			"40":c.get('40'),
-			"shipping_line":self.shipping_line,
-			"status":self.workflow_state,
-			"row_name":c.name
-			})
-			vals.save()
-		else:
-			test_doc = frappe.get_doc("Track Shipping Order",{"container_no":c.container_no,"name1":self.name})
-			test_doc.source_location = self.loading_port
-			test_doc.destination_location = self.discharging_port
-			test_doc.transport_carriage = self.transport
-			test_doc.container_no = c.container_no
-			test_doc.shipping_line = self.shipping_line
-			test_doc.name1 = self.name
-			test_doc.set("20",c.get('20'))
-			test_doc.set("40",c.get('40'))
-			test_doc.status = self.workflow_state
-			test_doc.row_name = c.name
-			test_doc.save()
+		if c.container_no:
+			if not frappe.db.exists("Track Shipping Order",{"container_no":c.container_no,"name1":self.name, "row_name":c.name}):
+				vals = frappe.get_doc({
+				"doctype": "Track Shipping Order",
+				"name1":self.name,
+				"source_location":self.loading_port,
+				"destination_location":self.discharging_port,
+				"transport_carriage":self.transport,
+				"container_no":c.container_no,
+				"20":c.get('20'),
+				"40":c.get('40'),
+				"shipping_line":self.shipping_line,
+				"status":self.workflow_state,
+				"row_name":c.name
+				})
+				vals.save()
+			else:
+				test_doc = frappe.get_doc("Track Shipping Order",{"container_no":c.container_no,"name1":self.name})
+				test_doc.source_location = self.loading_port
+				test_doc.destination_location = self.discharging_port
+				test_doc.transport_carriage = self.transport
+				test_doc.container_no = c.container_no
+				test_doc.shipping_line = self.shipping_line
+				test_doc.name1 = self.name
+				test_doc.set("20",c.get('20'))
+				test_doc.set("40",c.get('40'))
+				test_doc.status = self.workflow_state
+				test_doc.row_name = c.name
+				test_doc.save()
 	# else:
 	# 	vals = frappe.get_doc({
 	# 		"doctype": "Track Shipping Order",

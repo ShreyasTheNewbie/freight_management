@@ -199,6 +199,7 @@
    "fieldname": "containers",
    "fieldtype": "Table",
    "label": "Containers",
+   "no_copy": 1,
    "options": "Container"
   },
   {
@@ -209,7 +210,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-09 10:47:23.388955",
+ "modified": "2025-06-09 12:47:29.812902",
  "modified_by": "Administrator",
  "module": "Freight Management",
  "name": "Direct Shipping",
