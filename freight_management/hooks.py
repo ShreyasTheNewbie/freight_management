@@ -23,6 +23,19 @@ fixtures = [{
     },
      {
     "doctype": "Workflow Action Master"
+    },
+    {
+        "doctype": "Custom Field",
+        "filters": {
+            "dt": [
+                "in",
+                [
+                "Quoatation",
+                "Sales Order",
+                ]
+            ],
+            "module": "Freight Management"
+        }
     }
     ]
 
@@ -51,7 +64,15 @@ doctype_js = {"Sales Order" : "public/js/sales_order.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-
+app_include_css = [
+  "/assets/freight_management/css/theme/theme1.css",
+  "/assets/freight_management/css/theme/theme2.css",
+  "/assets/freight_management/css/theme/theme3.css",
+  "/assets/freight_management/css/theme/theme4.css",
+]
+# app_include_js = [
+#   "/assets/freight_management/js/theme/theme_switcher.js"
+# ]
 
 # Home Pages
 # --------
@@ -124,6 +145,9 @@ doc_events = {
     'Direct Shipping': {
         'validate': [
             'freight_management.freight_management.doctype.direct_shipping.direct_shipping.validate'
+        ],
+        "before_insert": [
+            'freight_management.freight_management.doctype.direct_shipping.direct_shipping.add_containers_to_track_shipping_order'
         ],
   },
   'Custom Clearance': {

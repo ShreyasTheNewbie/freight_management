@@ -3,8 +3,10 @@ from frappe.model.mapper import get_mapped_doc
 
 @frappe.whitelist()
 def make_direct_shipping(source_name):
-    return get_mapped_doc(
-        "Sales Order", source_name,
+
+    target = get_mapped_doc(
+        "Sales Order",
+        source_name,
         {
             "Sales Order": {
                 "doctype": "Direct Shipping",
@@ -13,17 +15,12 @@ def make_direct_shipping(source_name):
                     "transaction_date": "order_date",
                     "customer": "customer",
                     "company": "company",
-                    "customer_name": "party"
-                }
-            },
-            "Sales Order Item": {
-                "doctype": "Freight Order Line",
-                "field_map": {
-                    "item_code": "items",
-                    "rate": "price",
-                    "amount": "sale_price"
+                    "customer_name": "party",
+                    "custom_local__transit": "local__transit"
                 }
             }
         },
-        target_doc=None  # do not save
+        None
     )
+
+    return target
