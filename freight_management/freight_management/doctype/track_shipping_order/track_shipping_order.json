@@ -15,7 +15,9 @@
   "container_no",
   "20",
   "40",
-  "status"
+  "status",
+  "remarks",
+  "row_name"
  ],
  "fields": [
   {
@@ -62,8 +64,9 @@
    "read_only": 1
   },
   {
+   "default": "0",
    "fieldname": "40",
-   "fieldtype": "Data",
+   "fieldtype": "Check",
    "label": "40'",
    "read_only": 1
   },
@@ -73,14 +76,28 @@
    "label": "Shipping Line",
    "options": "Shipping Line",
    "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "bold": 1,
+   "fieldname": "row_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "row_name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-08 15:09:17.349244",
+ "modified": "2025-06-09 10:27:47.538890",
  "modified_by": "Administrator",
  "module": "Freight Management",
  "name": "Track Shipping Order",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
