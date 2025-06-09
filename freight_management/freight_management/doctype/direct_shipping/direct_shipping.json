@@ -49,7 +49,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Direction",
-   "options": "Import\nExport"
+   "options": "Export\nImport"
   },
   {
    "fieldname": "customer",
@@ -209,7 +209,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-08 20:47:26.434514",
+ "modified": "2025-06-09 10:47:23.388955",
  "modified_by": "Administrator",
  "module": "Freight Management",
  "name": "Direct Shipping",
