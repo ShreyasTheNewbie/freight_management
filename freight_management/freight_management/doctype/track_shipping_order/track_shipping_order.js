@@ -4,7 +4,7 @@
 frappe.ui.form.on('Track Shipping Order', {
     refresh(frm) {
 		frm.toggle_enable(["name1", "status", "remarks", "shipping_line", "source_location", "destination_location", "transport_carriage"], 0);
-        if (frm.doc.status !== "Delivered") {
+        if (frm.doc.status !== "Delivered" && !frm.is_new()) {
             frm.add_custom_button(__('Update Status'), () => {
                 let dialog = new frappe.ui.Dialog({
                     title: 'Update Shipping Status',

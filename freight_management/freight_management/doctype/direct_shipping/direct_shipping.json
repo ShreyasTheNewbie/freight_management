@@ -209,8 +209,13 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2025-06-09 12:47:29.812902",
+ "links": [
+  {
+   "link_doctype": "Track Shipping Order",
+   "link_fieldname": "name1"
+  }
+ ],
+ "modified": "2025-06-10 09:40:34.322343",
  "modified_by": "Administrator",
  "module": "Freight Management",
  "name": "Direct Shipping",

@@ -23,7 +23,6 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Name"
   },
   {
@@ -41,7 +40,6 @@
   {
    "fieldname": "transport_carriage",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Transport Carriage"
   },
   {
@@ -53,6 +51,7 @@
   {
    "fieldname": "container_no",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Container No",
    "read_only": 1
   },
@@ -60,6 +59,7 @@
    "default": "0",
    "fieldname": "20",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "20'",
    "read_only": 1
   },
@@ -67,12 +67,14 @@
    "default": "0",
    "fieldname": "40",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "40'",
    "read_only": 1
   },
   {
    "fieldname": "shipping_line",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Shipping Line",
    "options": "Shipping Line",
    "read_only": 1
@@ -93,7 +95,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-09 10:27:47.538890",
+ "modified": "2025-06-10 09:39:24.518705",
  "modified_by": "Administrator",
  "module": "Freight Management",
  "name": "Track Shipping Order",
