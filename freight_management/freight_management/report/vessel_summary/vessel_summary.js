@@ -21,5 +21,12 @@ frappe.query_reports["Vessel Summary"] = {
             fieldtype: "Link",
             options: "Shipping Line"
         }
-    ]
+    ],
+	formatter: function(value, row, column, data, default_formatter) {
+        value = default_formatter(value, row, column, data);
+        if (column.fieldname === "name1" && data && data.name) {
+            return `<a href="/app/vessels/${data.name}" style="font-weight:bold">${value}</a>`;
+        }
+        return value;
+    }
 };

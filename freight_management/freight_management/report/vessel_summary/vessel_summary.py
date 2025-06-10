@@ -41,7 +41,7 @@ def get_data(filters):
     return frappe.get_all("Vessels",
         filters=conditions,
         fields=[
-            "name1", "shipping_line", "draft", "loa", "grt",
+            "name","name1", "shipping_line", "draft", "loa", "grt",
             "eta", "etb", "etd", "discharge_20", "discharge_40",
             "load_20", "load_40", "remarks"
         ]
