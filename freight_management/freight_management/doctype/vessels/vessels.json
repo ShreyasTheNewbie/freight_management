@@ -7,18 +7,37 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "vessel_details_section",
   "name1",
   "code",
   "country",
   "transport",
-  "notes"
+  "column_break_qtjr",
+  "shipping_line",
+  "draft",
+  "loa",
+  "grt",
+  "section_schedule",
+  "eta",
+  "column_break_iwtb",
+  "etb",
+  "column_break_tkow",
+  "etd",
+  "section_container_summary",
+  "discharge_20",
+  "discharge_40",
+  "remarks",
+  "column_break_qowt",
+  "load_20",
+  "load_40"
  ],
  "fields": [
   {
+   "bold": 1,
    "fieldname": "name1",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Name",
+   "label": "Vessel Name",
    "reqd": 1
   },
   {
@@ -37,22 +56,113 @@
   {
    "fieldname": "transport",
    "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Transport ",
-   "options": "Land\nOcean\nAir"
+   "hidden": 1,
+   "label": "Transport",
+   "options": "Ocean\nAir\nLand"
   },
   {
-   "fieldname": "notes",
-   "fieldtype": "Long Text",
-   "label": "Notes"
+   "bold": 1,
+   "fieldname": "shipping_line",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shipping Line",
+   "options": "Shipping Line",
+   "reqd": 1
+  },
+  {
+   "fieldname": "draft",
+   "fieldtype": "Float",
+   "label": "Draft (m)"
+  },
+  {
+   "fieldname": "loa",
+   "fieldtype": "Float",
+   "label": "Length Overall (LOA)"
+  },
+  {
+   "fieldname": "grt",
+   "fieldtype": "Float",
+   "label": "Gross Register Tonnage (GRT)"
+  },
+  {
+   "fieldname": "section_schedule",
+   "fieldtype": "Section Break",
+   "label": "Schedule"
+  },
+  {
+   "fieldname": "eta",
+   "fieldtype": "Datetime",
+   "label": "ETA"
+  },
+  {
+   "fieldname": "etb",
+   "fieldtype": "Datetime",
+   "label": "ETB"
+  },
+  {
+   "fieldname": "etd",
+   "fieldtype": "Datetime",
+   "label": "ETD"
+  },
+  {
+   "fieldname": "section_container_summary",
+   "fieldtype": "Section Break",
+   "label": "Container Summary"
+  },
+  {
+   "fieldname": "discharge_20",
+   "fieldtype": "Int",
+   "label": "Discharge 20'"
+  },
+  {
+   "fieldname": "discharge_40",
+   "fieldtype": "Int",
+   "label": "Discharge 40'"
+  },
+  {
+   "fieldname": "load_20",
+   "fieldtype": "Int",
+   "label": "Load 20'"
+  },
+  {
+   "fieldname": "load_40",
+   "fieldtype": "Int",
+   "label": "Load 40'"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "vessel_details_section",
+   "fieldtype": "Section Break",
+   "label": "Vessel Details"
+  },
+  {
+   "fieldname": "column_break_qtjr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iwtb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tkow",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qowt",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-06-29 16:27:18.830308",
+ "modified": "2025-06-10 09:11:06.677582",
  "modified_by": "Administrator",
  "module": "Freight Management",
  "name": "Vessels",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -68,6 +178,8 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }
