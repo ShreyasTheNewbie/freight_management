@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{user}-{DD}/{MM}/{YYYY}-{#}",
+ "creation": "2025-06-11 10:26:22.468109",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "column_break_aewn",
+  "user",
+  "section_break_wmvb",
+  "location",
+  "activites",
+  "column_break_yiay",
+  "result__expected",
+  "section_break_xfcw",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "columns": 1,
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_aewn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "User",
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_wmvb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "columns": 1,
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Location",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "columns": 2,
+   "fieldname": "activites",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Activites",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yiay",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "result__expected",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Result / Expected"
+  },
+  {
+   "fieldname": "section_break_xfcw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-11 10:49:26.856795",
+ "modified_by": "Administrator",
+ "module": "Freight Management",
+ "name": "Daily Activity",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
