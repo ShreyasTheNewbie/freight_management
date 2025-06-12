@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"NqV_6OsUDz\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Freight Management</span>\",\"col\":12}},{\"id\":\"zt44To-NDn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Direct Shipping\",\"col\":4}},{\"id\":\"bB9q5PI9Cm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Track Shipping Order\",\"col\":4}},{\"id\":\"RoTolQvcwu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shipping Order Report\",\"col\":4}},{\"id\":\"dkLJNjcgKn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vessel Summary\",\"col\":3}},{\"id\":\"YcpC3tjFY_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"lDMD3A_3Ul\",\"type\":\"card\",\"data\":{\"card_name\":\"Configurations\",\"col\":4}}]",
+ "content": "[{\"id\":\"NqV_6OsUDz\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Freight Management</span>\",\"col\":12}},{\"id\":\"zt44To-NDn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Direct Shipping\",\"col\":4}},{\"id\":\"bB9q5PI9Cm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Track Shipping Order\",\"col\":4}},{\"id\":\"RoTolQvcwu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shipping Order Report\",\"col\":4}},{\"id\":\"dkLJNjcgKn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vessel Summary\",\"col\":4}},{\"id\":\"OPxQGLGTXh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daily Activities\",\"col\":4}},{\"id\":\"wYc_3WiLe6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daily Activity Report\",\"col\":4}},{\"id\":\"zsPxBWk2S5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stuffing Details\",\"col\":4}},{\"id\":\"mxcLjhX0Df\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stuffing Report\",\"col\":4}},{\"id\":\"YcpC3tjFY_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"lDMD3A_3Ul\",\"type\":\"card\",\"data\":{\"card_name\":\"Configurations\",\"col\":4}}]",
  "creation": "2023-05-17 16:35:35.561400",
  "custom_blocks": [],
  "docstatus": 0,
@@ -42,7 +42,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-06-10 09:36:30.550824",
+ "modified": "2025-06-12 12:24:42.221997",
  "modified_by": "Administrator",
  "module": "Freight Management",
  "name": "Freight Management",
@@ -65,9 +65,41 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Daily Activities",
+   "link_to": "Daily Activity",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Stuffing Details",
+   "link_to": "Stuffing Details",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Shipping Order Report",
    "link_to": "Shipping Order Report",
    "report_ref_doctype": "Track Shipping Order",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Daily Activity Report",
+   "link_to": "Daily Activity Report",
+   "report_ref_doctype": "Daily Activity",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Stuffing Report",
+   "link_to": "Stuffing Report",
+   "report_ref_doctype": "Stuffing Details",
    "type": "Report"
   },
   {

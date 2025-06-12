@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SD{DD}{MM}{YY}{##}",
+ "creation": "2025-06-12 11:01:08.209577",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "column_break_kped",
+  "remarks",
+  "received_goods_section",
+  "received_goods",
+  "stuffed_full_containers_section",
+  "full_containers"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "bold": 1,
+   "fieldname": "received_goods_section",
+   "fieldtype": "Section Break",
+   "label": "Received Goods"
+  },
+  {
+   "fieldname": "received_goods",
+   "fieldtype": "Table",
+   "options": "Received Goods"
+  },
+  {
+   "bold": 1,
+   "fieldname": "stuffed_full_containers_section",
+   "fieldtype": "Section Break",
+   "label": "Stuffed Full Containers"
+  },
+  {
+   "fieldname": "full_containers",
+   "fieldtype": "Table",
+   "options": "Stuffed Full Containers"
+  },
+  {
+   "fieldname": "column_break_kped",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remarks",
+   "max_height": "100px"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-12 11:31:18.308011",
+ "modified_by": "Administrator",
+ "module": "Freight Management",
+ "name": "Stuffing Details",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
