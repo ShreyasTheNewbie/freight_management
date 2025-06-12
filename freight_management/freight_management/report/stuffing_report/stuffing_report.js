@@ -7,6 +7,7 @@ frappe.query_reports["Stuffing Report"] = {
 			"fieldname": "date",
 			"label": __("Date"),
 			"fieldtype": "Date",
+			"reqd": 1,
 		},
 		{
 			"fieldname": "section",
@@ -16,6 +17,7 @@ frappe.query_reports["Stuffing Report"] = {
 				{ "value": "Received Goods", "label": __("Received Goods")},
 				{ "value": "Stuffed Full Containers", "label": __("Stuffed Full Containers") },
 			],
+			"reqd": 1,
 		}
 	]
 };
